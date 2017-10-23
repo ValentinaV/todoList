@@ -29,14 +29,16 @@ module.exports = {
             ]
       },
       {
-        test: /\.css?$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        test: /\.scss$/,
+        use: [
+                'style-loader',
+                'css-loader',
+                'sass-loader'
+            ]
       }
     ]
   },
-
   devtool: 'eval-source-map',
-
   resolve: {
     extensions: ['.js', '.jsx', '.json', '*']
   }
