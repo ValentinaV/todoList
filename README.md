@@ -1,7 +1,7 @@
 # todoList
 ## Tools
 
-Nodejs needs to be installed nodejs.org/.
+Nodejs needs to be installed http://nodejs.org/.
 
 Then for the browser build :
 ```
