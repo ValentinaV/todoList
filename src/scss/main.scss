@@ -1,0 +1,137 @@
+$color: #ccc;
+$colorApp: #b6ead4;
+$colorAppShadow1: #a3e8cc;
+$colorAppShadow2: #9be0c4;
+$colorPink: #ffc3bb;
+$colorText: #716969;
+
+$paddingLeft: 10px;
+
+body {
+	background: $color;
+	color: $colorText;
+
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+#root {
+	min-width: 370px;
+	max-width: 480px;
+	background: $colorApp;
+	margin: 0 auto;
+
+	.todoApp {
+		padding: 10px 30px 20px;
+    	box-shadow: 4px 4px $colorAppShadow1, 8px 8px $colorAppShadow2;
+	
+		header {
+			text-align: center;
+			border-bottom: 2px solid $colorText;
+
+			h1 {
+				margin: 5px 0;
+				font: {
+					weight: normal;
+				}
+			}
+		}
+
+		button {
+		    background: 0 0;
+		    border: none;
+		    color: $colorText;
+		    position: relative;
+		    height: 36px;
+		    margin: 0;
+		    font-family: "Roboto","Helvetica","Arial",sans-serif;
+		    font-size: 14px;
+		    font-weight: 500;
+		    text-transform: uppercase;
+		    cursor: pointer;
+		    vertical-align: middle;
+
+		    &.icon {
+			    border-radius: 50%;
+			    font-size: 24px;
+			    margin-left: 0;
+			    margin-right: 0;
+			    min-width: 32px;
+			    width: 32px;
+			    padding: 0;
+			    overflow: hidden;
+			    line-height: normal;
+			}
+
+			.material-icons {
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-12px,-12px);
+			    line-height: 24px;
+			    width: 24px;
+			    vertical-align: middle;
+			}
+		}
+
+
+		.todo-add-form {
+		    display: flex;
+		    padding-top: 10px;
+
+		    input {
+			    flex: 1;
+			    outline: none;
+			    border: none;
+    			padding-left: $paddingLeft;
+
+			    &:focus {
+				    border: 1px solid #00d8ff;
+				}
+
+				font: {
+					size: 15px;
+				}
+			}
+
+			button {
+			    margin-left: 10px;
+			}
+		}
+
+		.todo-edit-form {
+		    display: flex;
+	        padding-top: 5px;
+			input {
+		    	flex: 1;
+	    	    padding-left: $paddingLeft;
+    			font-size: 15px;
+    			color: $colorText;
+			}
+		}
+
+		.todo-edit-form .save {
+		    margin-left: .5em;
+		}
+
+		/* Todo */
+		.todo-item {
+		    display: flex;
+		    border-bottom: 1px solid rgba(0,0,0,.1);
+		    padding-left: $paddingLeft;
+		    align-items: center;
+
+		    button {
+			    opacity: 0;
+			    transition: all .2s;
+			}
+
+			&:hover {
+				button {
+				    opacity: 1;
+				}
+			}
+		}
+	}
+
+	
+}
